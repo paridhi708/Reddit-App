@@ -1,0 +1,42 @@
+<div *ngIf="commentsData" class="container">
+    <h5>{{commentHeaderData.title}}</h5>
+
+    <div class="row border-below" *ngFor="let comment of commentsArray">
+        <div class="col-md-1">
+            <div class="d-flex flex-column votebox">
+                <div>
+                    <fa-icon class="upvote" [icon]="faArrowUp"></fa-icon>
+                </div>
+                <div class="votecount">{{comment.data.score}}</div>
+                <div>
+                    <fa-icon class="downvote" [icon]="faArrowDown"></fa-icon>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-11">
+            <span class="subreddit-info">
+                <span class="subreddit-text"><a class="posturl"
+                        routerLink="">{{comment.data.subreddit_name_prefixed}}</a></span>
+                <span> . Posted by <a class="username">{{comment.data.author}}</a></span>
+                <span> . 11 hours ago</span>
+            </span>
+            <p class="font-weight-bold">{{comment.data.body}}</p>
+
+            <div class="row" *ngFor="let rply of getCleanData(comment.data.replies)">
+                <div class="d-flex flex-column votebox" *ngIf="rply.score > 0">
+                    <div>
+                        <fa-icon class="upvote" [icon]="faArrowUp"></fa-icon>
+                    </div>
+                    <div class="votecount">{{rply.score}}</div>
+                    <div>
+                        <fa-icon class="downvote" [icon]="faArrowDown"></fa-icon>
+                    </div>
+                </div>
+                <div class="col-md-11"> {{rply.body}}</div>
+            </div>
+            
+        </div>
+
+    </div>
+
+</div>

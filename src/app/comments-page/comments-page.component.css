@@ -1,0 +1,11 @@
+.subreddit-info{
+    font-size:12px;
+}
+.border-below{
+border-bottom:1px solid lightgray;
+}
+
+h5 {
+    border:1px solid lightgray;
+    padding: 2px;
+}

@@ -58,7 +58,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div *ngIf=\"commentsData\" class=\"container\">\n    <h5>{{commentHeaderData.title}}</h5>\n\n    <div class=\"row border-below\" *ngFor=\"let comment of commentsArray\">\n        <div class=\"col-md-1\">\n            <div class=\"d-flex flex-column votebox\">\n                <div>\n                    <fa-icon class=\"upvote\" [icon]=\"faArrowUp\"></fa-icon>\n                </div>\n                <div class=\"votecount\">{{comment.data.score}}</div>\n                <div>\n                    <fa-icon class=\"downvote\" [icon]=\"faArrowDown\"></fa-icon>\n                </div>\n            </div>\n        </div>\n        <div class=\"col-md-11\">\n            <span class=\"subreddit-info\">\n                <span class=\"subreddit-text\"><a class=\"posturl\"\n                        routerLink=\"\">{{comment.data.subreddit_name_prefixed}}</a></span>\n                <span> . Posted by <a class=\"username\">{{comment.data.author}}</a></span>\n                <span> . 11 hours ago</span>\n            </span>\n            <p class=\"font-weight-bold\">{{comment.data.body}}</p>\n\n            <div class=\"row\" *ngFor=\"let rply of getCleanData(comment.data.replies)\">\n                <div class=\"d-flex flex-column votebox\" *ngIf=\"rply.score > 0\">\n                    <div>\n                        <fa-icon class=\"upvote\" [icon]=\"faArrowUp\"></fa-icon>\n                    </div>\n                    <div class=\"votecount\">{{rply.score}}</div>\n                    <div>\n                        <fa-icon class=\"downvote\" [icon]=\"faArrowDown\"></fa-icon>\n                    </div>\n                </div>\n                <div class=\"col-md-11\"> {{rply.body}}</div>\n            </div>\n            \n        </div>\n\n    </div>\n\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div *ngIf=\"commentsData\" class=\"container\">\n    <h5>{{commentHeaderData.title}}</h5>\n\n    <div class=\"row border-below\" *ngFor=\"let comment of commentsArray\">\n        <div class=\"col-md-1\">\n            <div class=\"d-flex flex-column votebox\">\n                <!-- <div>\n                    <fa-icon class=\"upvote\" [icon]=\"faArrowUp\"></fa-icon>\n                </div> -->\n                <div class=\"votecount\">{{comment.data.score}}</div>\n                <!-- <div>\n                    <fa-icon class=\"downvote\" [icon]=\"faArrowDown\"></fa-icon>\n                </div> -->\n            </div>\n        </div>\n        <div class=\"col-md-11\">\n            <span class=\"subreddit-info\">\n                <span class=\"subreddit-text\"><a class=\"posturl\"\n                        routerLink=\"\">{{comment.data.subreddit_name_prefixed}}</a></span>\n                <span> . Posted by <a class=\"username\">{{comment.data.author}}</a></span>\n                <span> . 11 hours ago</span>\n            </span>\n            <p class=\"font-weight-bold\">{{comment.data.body}}</p>\n\n            <div class=\"row\" *ngFor=\"let rply of getCleanData(comment.data.replies)\">\n                <div class=\"d-flex flex-column votebox\" *ngIf=\"rply.score > 0\">\n                    <!-- <div>\n                        <fa-icon class=\"upvote\" [icon]=\"faArrowUp\"></fa-icon>\n                    </div> -->\n                    <div class=\"votecount\">{{rply.score}}</div>\n                    <!-- <div>\n                        <fa-icon class=\"downvote\" [icon]=\"faArrowDown\"></fa-icon>\n                    </div> -->\n                </div>\n                <div class=\"col-md-11\"> {{rply.body}}</div>\n            </div>\n            \n        </div>\n\n    </div>\n\n</div>");
 
 /***/ }),
 
@@ -71,7 +71,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<header>\n    <nav class=\"navbar fixed-top navbar-expand-lg navbar-light bg-light\">\n        <div class=\"flex-grow-1\">\n            <a aria-label=\"Home\" class=\"logo\" routerLink=\"/\">\n                <svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\" class=\"reddit-icon-svg\">\n                    <g>\n                        <circle fill=\"#FF4500\" cx=\"10\" cy=\"10\" r=\"10\"></circle>\n                        <path fill=\"#FFF\"\n                            d=\"M16.67,10A1.46,1.46,0,0,0,14.2,9a7.12,7.12,0,0,0-3.85-1.23L11,4.65,13.14,5.1a1,1,0,1,0,.13-0.61L10.82,4a0.31,0.31,0,0,0-.37.24L9.71,7.71a7.14,7.14,0,0,0-3.9,1.23A1.46,1.46,0,1,0,4.2,11.33a2.87,2.87,0,0,0,0,.44c0,2.24,2.61,4.06,5.83,4.06s5.83-1.82,5.83-4.06a2.87,2.87,0,0,0,0-.44A1.46,1.46,0,0,0,16.67,10Zm-10,1a1,1,0,1,1,1,1A1,1,0,0,1,6.67,11Zm5.81,2.75a3.84,3.84,0,0,1-2.47.77,3.84,3.84,0,0,1-2.47-.77,0.27,0.27,0,0,1,.38-0.38A3.27,3.27,0,0,0,10,14a3.28,3.28,0,0,0,2.09-.61A0.27,0.27,0,1,1,12.48,13.79Zm-0.18-1.71a1,1,0,1,1,1-1A1,1,0,0,1,12.29,12.08Z\">\n                        </path>\n                    </g>\n                </svg>\n                <span class=\"reddit-text\">\n                    reddit\n                </span>\n                <svg class=\"eZQ5o2PrhR59wkAtPbxMU ml-3 small-icon\"viewBox=\"0 0 20 20\" xmlns=\"http://www.w3.org/2000/svg\">\n                    <polygon points=\"12.5 3.5 20 3.5 20 11 17.5 8.5 11.25 14.75 7.5 11 2.5 16 0 13.5 7.5 6 11.25 9.75 15 6\"></polygon>\n                </svg>\n                <span class=\"reddit-text\">\n                    Popular\n                </span>\n                \n            </a>\n        </div>\n        <div class=\"search-container flex-grow-1\">\n            <input type=\"text\" class=\"p-1\" placeholder=\"Search Reddit\" name=\"search\">\n            <button class=\"p-1\"><fa-icon  [icon]=\"faSearch\"></fa-icon></button>\n        </div>\n        <div class=\"flex-grow-1\">\n            \n            <div>\n                <a routerLink=\"/signup\" class=\"float-right signup mr-2\">Sign up</a>\n                <a routerLink=\"/login\" class=\"float-right login mr-2\">Login</a>\n            </div>\n        </div>\n    </nav>\n</header>");
+/* harmony default export */ __webpack_exports__["default"] = ("<header>\n    <nav class=\"navbar fixed-top navbar-expand-lg navbar-light bg-light\">\n        <div class=\"flex-grow-1\">\n            <a aria-label=\"Home\" class=\"logo\" routerLink=\"/\">\n                <svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\" class=\"reddit-icon-svg\">\n                    <g>\n                        <circle fill=\"#FF4500\" cx=\"10\" cy=\"10\" r=\"10\"></circle>\n                        <path fill=\"#FFF\"\n                            d=\"M16.67,10A1.46,1.46,0,0,0,14.2,9a7.12,7.12,0,0,0-3.85-1.23L11,4.65,13.14,5.1a1,1,0,1,0,.13-0.61L10.82,4a0.31,0.31,0,0,0-.37.24L9.71,7.71a7.14,7.14,0,0,0-3.9,1.23A1.46,1.46,0,1,0,4.2,11.33a2.87,2.87,0,0,0,0,.44c0,2.24,2.61,4.06,5.83,4.06s5.83-1.82,5.83-4.06a2.87,2.87,0,0,0,0-.44A1.46,1.46,0,0,0,16.67,10Zm-10,1a1,1,0,1,1,1,1A1,1,0,0,1,6.67,11Zm5.81,2.75a3.84,3.84,0,0,1-2.47.77,3.84,3.84,0,0,1-2.47-.77,0.27,0.27,0,0,1,.38-0.38A3.27,3.27,0,0,0,10,14a3.28,3.28,0,0,0,2.09-.61A0.27,0.27,0,1,1,12.48,13.79Zm-0.18-1.71a1,1,0,1,1,1-1A1,1,0,0,1,12.29,12.08Z\">\n                        </path>\n                    </g>\n                </svg>\n                <span class=\"reddit-text\">\n                    reddit\n                </span>\n                <svg class=\"eZQ5o2PrhR59wkAtPbxMU ml-3 small-icon\"viewBox=\"0 0 20 20\" xmlns=\"http://www.w3.org/2000/svg\">\n                    <polygon points=\"12.5 3.5 20 3.5 20 11 17.5 8.5 11.25 14.75 7.5 11 2.5 16 0 13.5 7.5 6 11.25 9.75 15 6\"></polygon>\n                </svg>\n                <span class=\"reddit-text\">\n                    Popular\n                </span>\n                \n            </a>\n        </div>\n        <div class=\"search-container flex-grow-1\">\n            <input type=\"text\" class=\"p-1\" placeholder=\"Search Reddit\" name=\"search\">\n            <!-- <button class=\"p-1\"><fa-icon  [icon]=\"faSearch\"></fa-icon></button> -->\n        </div>\n        <div class=\"flex-grow-1\">\n            \n            <div>\n                <a routerLink=\"/signup\" class=\"float-right signup mr-2\">Sign up</a>\n                <a routerLink=\"/login\" class=\"float-right login mr-2\">Login</a>\n            </div>\n        </div>\n    </nav>\n</header>");
 
 /***/ }),
 
@@ -97,7 +97,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<h3>Popular posts</h3>\n\n<div class=\"row post\" *ngFor=\"let post of posts\">\n    <div class=\"col-md-1\">\n        \n        <div class=\"d-flex flex-column votebox\">\n            <div class=\"p-2\">\n                <fa-icon  class=\"upvote\" [icon]=\"faArrowUp\"></fa-icon>\n            </div>\n            <div class=\"p-2 votecount\">{{post.score}}</div>\n            <div class=\"p-2\">\n                <fa-icon class=\"downvote\" [icon]=\"faArrowDown\"></fa-icon>\n            </div>\n        </div>\n    </div>\n    <div class=\"col-md-11\">\n        <span class=\"subreddit-info\">\n            <span class=\"subreddit-text\"><a class=\"posturl\" routerLink=\"\">{{post.data.subreddit_name_prefixed}}</a></span>\n            <span> . Posted by <a class=\"username\">{{post.data.author_fullname}}</a></span>\n            <span> . 11 hours ago</span>\n        </span>\n        \n        <div class=\"post-title\">\n            <a class=\"postname\" [routerLink]=\"['/comments-page',post.data.permalink]\">{{post.data.title}}</a>\n        </div>\n        <span>\n            <a class=\"btnCommments\">\n                Comments({{post.data.num_comments}})\n            </a>   \n        </span>\n        <hr/>\n    </div>\n</div> \n\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<h3>Popular posts</h3>\n\n<div class=\"row post\" *ngFor=\"let post of posts\">\n    <div class=\"col-md-1\">\n        \n        <div class=\"d-flex flex-column votebox\">\n            <!-- <div class=\"p-2\">\n                <fa-icon  class=\"upvote\" [icon]=\"faArrowUp\"></fa-icon>\n            </div> -->\n            <div class=\"p-2 votecount\">{{post.score}}</div>\n            <!-- <div class=\"p-2\">\n                <fa-icon class=\"downvote\" [icon]=\"faArrowDown\"></fa-icon>\n            </div> -->\n        </div>\n    </div>\n    <div class=\"col-md-11\">\n        <span class=\"subreddit-info\">\n            <span class=\"subreddit-text\"><a class=\"posturl\" routerLink=\"\">{{post.data.subreddit_name_prefixed}}</a></span>\n            <span> . Posted by <a class=\"username\">{{post.data.author_fullname}}</a></span>\n            <span> . 11 hours ago</span>\n        </span>\n        \n        <div class=\"post-title\">\n            <a class=\"postname\" [routerLink]=\"['/comments-page',post.data.permalink]\">{{post.data.title}}</a>\n        </div>\n        <span>\n            <a class=\"btnCommments\">\n                Comments({{post.data.num_comments}})\n            </a>   \n        </span>\n        <hr/>\n    </div>\n</div> \n\n");
 
 /***/ }),
 
@@ -445,9 +445,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _side_bar_side_bar_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./side-bar/side-bar.component */ "./src/app/side-bar/side-bar.component.ts");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
 /* harmony import */ var _comments_page_comments_page_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./comments-page/comments-page.component */ "./src/app/comments-page/comments-page.component.ts");
-/* harmony import */ var _fortawesome_angular_fontawesome__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @fortawesome/angular-fontawesome */ "./node_modules/@fortawesome/angular-fontawesome/fesm2015/angular-fontawesome.js");
-/* harmony import */ var _comments_page_comment_replay_comment_replay_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./comments-page/comment-replay/comment-replay.component */ "./src/app/comments-page/comment-replay/comment-replay.component.ts");
-
+/* harmony import */ var _comments_page_comment_replay_comment_replay_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./comments-page/comment-replay/comment-replay.component */ "./src/app/comments-page/comment-replay/comment-replay.component.ts");
 
 
 
@@ -471,13 +469,12 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _post_post_component__WEBPACK_IMPORTED_MODULE_7__["PostComponent"],
             _side_bar_side_bar_component__WEBPACK_IMPORTED_MODULE_8__["SideBarComponent"],
             _comments_page_comments_page_component__WEBPACK_IMPORTED_MODULE_10__["CommentsPageComponent"],
-            _comments_page_comment_replay_comment_replay_component__WEBPACK_IMPORTED_MODULE_12__["CommentReplayComponent"]
+            _comments_page_comment_replay_comment_replay_component__WEBPACK_IMPORTED_MODULE_11__["CommentReplayComponent"]
         ],
         imports: [
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
             _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"],
-            _angular_common_http__WEBPACK_IMPORTED_MODULE_9__["HttpClientModule"],
-            _fortawesome_angular_fontawesome__WEBPACK_IMPORTED_MODULE_11__["FontAwesomeModule"]
+            _angular_common_http__WEBPACK_IMPORTED_MODULE_9__["HttpClientModule"]
         ],
         providers: [],
         bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]]
@@ -614,19 +611,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
 /* harmony import */ var _comment_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./comment.service */ "./src/app/comments-page/comment.service.ts");
-/* harmony import */ var _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons */ "./node_modules/@fortawesome/free-solid-svg-icons/index.es.js");
 
 
 
 
-
+//import { faArrowUp, faArrowDown } from '@fortawesome/free-solid-svg-icons';
 let CommentsPageComponent = class CommentsPageComponent {
+    //faArrowUp = faArrowUp;
+    //faArrowDown = faArrowDown;
     constructor(activatedRoute, commentsService) {
         this.activatedRoute = activatedRoute;
         this.commentsService = commentsService;
         this.commentsArray = [];
-        this.faArrowUp = _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__["faArrowUp"];
-        this.faArrowDown = _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__["faArrowDown"];
     }
     ngOnInit() {
         this.link = this.activatedRoute.snapshot.params.link;
@@ -700,14 +696,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HeaderComponent", function() { return HeaderComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons */ "./node_modules/@fortawesome/free-solid-svg-icons/index.es.js");
 
 
-
+//import { faSearch } from '@fortawesome/free-solid-svg-icons';
 let HeaderComponent = class HeaderComponent {
-    constructor() {
-        this.faSearch = _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_2__["faSearch"];
-    }
+    //faSearch=faSearch;
+    constructor() { }
     ngOnInit() {
     }
 };
@@ -794,18 +788,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _post_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./post.service */ "./src/app/post/post.service.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
-/* harmony import */ var _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons */ "./node_modules/@fortawesome/free-solid-svg-icons/index.es.js");
 
 
 
 
-
+//import { faArrowUp, faArrowDown } from '@fortawesome/free-solid-svg-icons';
 let PostComponent = class PostComponent {
+    // faArrowUp = faArrowUp;
+    // faArrowDown = faArrowDown;
     constructor(postService, router) {
         this.postService = postService;
         this.router = router;
-        this.faArrowUp = _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__["faArrowUp"];
-        this.faArrowDown = _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__["faArrowDown"];
     }
     ngOnInit() {
         this.postService.getAllPosts().subscribe(responseData => {
